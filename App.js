@@ -9,7 +9,7 @@ import ReduxThunk from 'redux-thunk'  ;
    componentWillMount()
    {
    const firebaseConfig = {
-      apiKey: "your_key",
+      apiKey: "AIzaSyCF8kGm7gDgtpVK18TCrcxGEivLSL6Nhd4",
       authDomain: "manager-428fc.firebaseapp.com",
       databaseURL: "https://manager-428fc.firebaseio.com",
       projectId: "manager-428fc",

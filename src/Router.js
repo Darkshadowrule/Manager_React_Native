@@ -18,7 +18,8 @@ return(
         rightTitle="Add"
          key="employeeList" 
          component={EmployeeList} 
-         title="Employee List"  />
+         title="Employee List" 
+         initial />
          <Scene key="employeeCreate" component={EmployeeCreate}  title="Create Employee"/>
         </Scene>
        
