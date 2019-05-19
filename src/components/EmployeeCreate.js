@@ -24,8 +24,9 @@ class EmployeeCreate extends React.Component{
                     onChangeText={text=>this.props.employeeUpdate({prop:'phone',value:text})}
                     />
                     </CardSection>
-                    <CardSection style={{flexDirection: 'column'}}>
-                        <Text style={styles.pickerTextStyle}>Shift</Text>
+                    <Text style={styles.pickerTextStyle}>Shift</Text>
+                    <CardSection style={{paddingLeft:18}}>
+                    
                         <Picker
                         style={{flex:1}}
                         selectedValue={this.props.shift}
@@ -56,7 +57,8 @@ const mapStateToProps=(state) => {
 const styles={
     pickerTextStyle:{
         fontSize:18,
-        paddingLeft: 20,
+        marginTop: 10,
+        paddingLeft: 25,
     }
 }
 export default connect(mapStateToProps,{employeeUpdate})(EmployeeCreate) ;
