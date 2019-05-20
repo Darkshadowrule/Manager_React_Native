@@ -1,11 +1,12 @@
 import React from 'react';
-import {Card, CardSection, Button} from './common';
+import {Card, CardSection, Button,Confirm} from './common';
 import _ from 'lodash'
 import {connect} from 'react-redux';
 import {employeeUpdate,employeeSave} from '../actions'
 import EmployeeForm from './EmployeeForm'
 import Communications from 'react-native-communications'
 class EmployeeEdit extends React.Component{
+    state ={showModal:false}
     componentWillMount()
     {
         _.each(this.props.employee,(value,prop)=>{
@@ -23,6 +24,13 @@ class EmployeeEdit extends React.Component{
         Communications.phonecall(phone,true)
 
     }
+    onAccept(){
+
+    }
+    onDecline()
+    {
+        this.setState({showModal:false})
+    }
     render()
     {
         return(
@@ -38,6 +46,21 @@ class EmployeeEdit extends React.Component{
                         Call
                     </Button>
                 </CardSection>
+                <CardSection>
+                    <Button onPress={()=> this.setState({showModal:!this.state.showModal})}>
+                        Delete
+                    </Button>
+                </CardSection>
+                <Confirm
+                visible={this.state.showModal}
+                onAccept={this.onAccept.bind(this)}
+                onDecline={this.onDecline.bind(this)}
+                
+                
+                >
+                    Are you sure you want to delete this?
+                </Confirm>
+
             </Card>
         )
     }
