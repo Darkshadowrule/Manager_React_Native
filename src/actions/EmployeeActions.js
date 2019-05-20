@@ -1,6 +1,7 @@
 import firebase from 'firebase'
 import {EMPLOYEE_UPDATE,EMPLOYEE_CREATE,EMPLOYEES_FETCH_SUCCESS} from './types'
 import { Actions } from 'react-native-router-flux';
+
 export const employeeUpdate =({prop,value}) =>{
     return{
         type:EMPLOYEE_UPDATE,
