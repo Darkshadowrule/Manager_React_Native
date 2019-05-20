@@ -1,6 +1,10 @@
 import firebase from 'firebase'
 import {EMPLOYEE_UPDATE,EMPLOYEE_CREATE,EMPLOYEES_FETCH_SUCCESS,EMPLOYEE_SAVE_SUCCESS,EMPLOYEE_DELETE_SUCCESS} from './types'
 import { Actions } from 'react-native-router-flux';
+import { YellowBox } from 'react-native';
+
+
+YellowBox.ignoreWarnings(['Setting a timer']);
 
 export const employeeUpdate =({prop,value}) =>{
     return{

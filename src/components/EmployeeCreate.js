@@ -7,7 +7,7 @@ class EmployeeCreate extends React.Component{
     onButtonPress()
     {
         const {name,phone,shift}=this.props;
-        this.props.employeeCreate({name,phone,shift:shift || 'Monday'})
+        this.props.employeeCreate({name,phone,shift:shift || '1'})
 
     }
     render()

@@ -7,7 +7,7 @@ import EmployeeEdit from './components/EmployeeEdit'
 
 const RouterComponent= ()=>{
 return(
- <Router sceneStyle={{paddingTop:80}}
+ <Router sceneStyle={{paddingTop:75}}
     navigationBarStyle={{height:50,marginTop:23}}>
         <Scene key="auth">
         <Scene key="login" component={LoginForm} title="Please Login" />
